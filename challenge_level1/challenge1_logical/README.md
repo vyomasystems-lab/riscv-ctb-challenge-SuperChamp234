@@ -15,13 +15,13 @@ An  "illegal operands" errors was encountered while trying to assemble a RISC-V 
    - The "andi" instruction in RISC-V is used for bitwise AND between a register and an immediate value. The instruction format is: `andi rd, rs1, imm`, where `rd` is the destination register, `rs1` is the source register, and `imm` is a 12-bit immediate value.
 
 4. **Identifying the Error - Line 15855:**
-   - The error on line 15855 involved the use of an invalid register `z4`. There is no `z` register in the RISC-V 32I ISA. We corrected the instruction to use a valid register.
+   - The error on line 15855 involved the use of an invalid register `z4`. There is no `z` register in the RISC-V 32I ISA. I corrected the instruction to use a valid register.
 
 5. **Identifying the Error - Line 25584:**
    - The error on line 25584 involved the "andi" instruction, which performs a bitwise AND between a register and an immediate value. The error indicated that `s0` was not a valid immediate value for the "andi" instruction.
 
 6. **Fixing Line 25584:**
-   - We corrected the "andi" instruction by replacing `s0` with a valid 12-bit immediate value. We used the immediate value `1` as an example. The corrected instruction is: `andi s5, t1, 1`.
+   - I corrected the "andi" instruction by replacing `s0` with a valid 12-bit immediate value. I used the immediate value `1` as an example. The corrected instruction is: `andi s5, t1, 1`.
 
 7. **Result:**
    - After making the above corrections, the code successfully assembled without any "illegal operands" errors.
@@ -35,4 +35,4 @@ An  "illegal operands" errors was encountered while trying to assemble a RISC-V 
 
 **Conclusion:**
 
-By understanding the RISC-V ISA, analyzing the code, and making the necessary corrections, we successfully fixed the "illegal operands" errors in the test.S assembly file. 
+By understanding the RISC-V ISA, analyzing the code, and making the necessary corrections, I successfully fixed the "illegal operands" errors in the test.S assembly file. 
